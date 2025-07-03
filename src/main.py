@@ -1,12 +1,13 @@
-import redis
 import json
-import time
-import subprocess
 import os
+import subprocess
+import time
 
-r = redis.Redis(host='localhost', port=6379)
+import redis
 
-queue_name = 'wrf-queue'
+r = redis.Redis(host="localhost", port=6379)
+
+queue_name = "wrf-queue"
 
 run_script_path = "../fortran/build/emiss.exe"
 
